@@ -2,25 +2,52 @@
     @import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
     @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     
-    header {
-        text-align: center;
-        text-justify: left;
+    * {
+        font-family: 'Raleway', sans-serif;
     }
 
+    header {
+        text-align: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 0.9em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer i {
+        font-size: 1.5em !important;
+        margin: 0 10px;
+        color: black;
+    }
+
+    a {
+        text-decoration: none;
+        color: lightskyblue;
+    }
 
 </style>
+
+<title>File Metadata</title>
+
 <header>
     <h1>File Metadata Microservice</h1>
     <p>This is a simple service to display the size of an upload file in bytes.</p>
 </header>
-<form action="">
+<form action="/api/fileanalyse" method="POST" enctype="multipart/form-data">
     <input type="file" name="file">
     <input type="submit">
 </form>
 
 <footer>
     <p>Created by Caleb Cox for the FreeCodeCamp Back-End API Curriculum</p>
-    <p>Find more of my work here:</p>
-    <p>View Source Code</p>
-    <p>View Challenge Requirements</p>
+    <p>Find more of my work here: <a href="https://github.com/CalebCox"><i class="fa fa-github"></i></a><a href="https://codepen.io/Nestik"><i class="fa fa-codepen"></i></a></p>
+    <p><a href="https://github.com/CalebCox/FileMetadata">View Source Code</a></p>
+    <p><a href="https://www.freecodecamp.org/challenges/file-metadata-microservice">View Challenge Requirements</a></p>
 </footer>
